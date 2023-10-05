@@ -65,7 +65,7 @@ input, select{
 }
 
 /* Estilos para tabletas y dispositivos más grandes (768px y superiores) */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 480px) {
     body {
         font-size: 15px;
     }
