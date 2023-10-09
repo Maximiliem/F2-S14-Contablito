@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contablito - Registro de movimientos de mercadería</title>
     <link rel="stylesheet" href="css/movement.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,28 +16,28 @@
     </header>
 
     <main>
-        <div class="flex-container">
+        <div class="col-7 col-sm-7 flex-container">
             <form>
                 <div class="container-transaction">
-                    <label for="transaccion">Tipo de transacción:</label>
-                    <Select name="Tipo de transaccion" required>
-                        <option disabled selected>-Elige una opción-</option>
+                    <label for="transactionType">Tipo de transacción:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected disabled>Elige una opción</option>
                         <option value="1">Compra</option>
                         <option value="2">Venta</option>
-                    </Select>
+                      </select>
                 </div>
                 <br>
 
                 <div class="container-date">
-                    <label for="fecha">Fecha:</label>
+                    <label for="fecha">Fecha del movimiento:</label>
                     <input type="date" id="fecha" name="fecha" required>
                 </div>
                 <br>
 
                 <div class="container-product">
-                    <label for="product">Producto:</label>
-                    <Select name="Tipo de transaccion" required>
-                        <option disabled selected>-Elige una opción-</option>
+                    <label for="fecha">Producto:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected disabled>Elige una opción</option>
                         <option value="1">Ladrillo de tejar</option>
                         <option value="2">Ladrillo macizo</option>
                         <option value="3">Ladrillo perforado</option>
@@ -44,41 +45,41 @@
                         <option value="5">Ladrillo aplantillado</option>
                         <option value="6">Ladrillo caravista</option>
                         <option value="7">Ladrillo refractario</option>
-                    </Select>
+                      </select>
                 </div>
                 <br>
 
                 <div class="container-count">
                     <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad" required>
+                    <input class="form-control" type="number" placeholder="Ingrese la cantidad de productos" aria-label="default input example" required>
                 </div>
                 <br>
 
                 <div class="container-unitary">
                     <label for="costo">Costo unitario:</label>
-                    <input type="number" step="0.01" id="costo" name="costo" required>
+                    <input class="form-control" type="number" aria-label="default input example">
                 </div>
                 <br>
 
                 <div class="container-sub">
                     <label for="costo">Subtotal:</label>
-                    <input type="number" step="0.01" id="costo" name="costo" required>
+                    <input class="form-control" type="number" aria-label="default input example">
                 </div>
                 <br>
 
                 <div class="container-iva">
                     <label for="costo">IVA:</label>
-                    <input type="number" step="0.01" id="costo" name="costo" required>
+                    <input class="form-control" type="number" aria-label="default input example">
                 </div>
                 <br>
 
                 <div class="container-finalprice">
                     <label for="costo">Total:</label>
-                    <input type="number" step="0.01" id="costo" name="costo" required>
+                    <input class="form-control" type="number" aria-label="default input example">
                 </div>
                 <br>
                 <div class="container-pricebtn">
-                    <button type="submit" class="btn">Registrar Producto</button>
+                    <button type="submit" class="btn bg-dark text-light">Registrar Producto</button>
                 </div>
             </form>
         </div>
@@ -87,7 +88,7 @@
 
     <footer>
         <div class="back-btn"> <!--botón para volver a la página principal-->
-            <button onclick="location.href='index.html'" class="btn"><-- Ir a la página principal</button>
+            <button onclick="location.href='index.html'" class="btn bg-dark text-light"><-- Ir a la página principal</button>
         </div>
     </footer>
 </body>
