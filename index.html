@@ -1,59 +1,81 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contablito - Software de Control de Stock de Mercadería</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Archivo CSS para estilos -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
+    <link rel="stylesheet" href="css/styles2.css">
+    <title>Contablito</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Contablito</a>
+        <!-- Boton collapse -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+         <!-- Contenido del boton collapse, se muestra todo esto una vez se hace click en el boton -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex ms-auto mt--4" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+          <ul class="navbar-nav mb-2 mb-lg-0">
 
-<body>
-    <header>
-        <nav class="navbar">
-          <div class="options">
-           <a href=""><i class="bi bi-person"></i></a>
-          </div>
-          </nav>
-    </header>
-    <main>
+            <!-- Dropdown-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"><i class="bi bi-person m-2"></i>Usuario</a>
 
-<div class="second-main">
-  <div class="activity">
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"/></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+
+            </li>
+          </ul>
+          <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          Menu
+          </a>
+        </div>
+      </div>
+    </nav>
+    
+    <!--Offcanvas -->
+    <div class="offcanvas offcanvas-start bg-dark text-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Contablito</h5>
         
-  </div>
-  <div class="products">
-        
-  </div>
-  <div class="resume">
-        
-  </div>
-</div>
-
-<div class="barra-lateral">
-
-<div class="container-text c1">
-    <h1>Contablito</h1>
-    <p>Software de Control de Stock de Mercaderías</p>
-</div>
-<section id="registro-productos">
-  <i class="bi bi-journal-text"></i> <a href="products.html" class="boton-link">Registro de <br>Productos</a>
-</section>
-
-<section id="registro-movimientos">
-  <i class="bi bi-arrow-repeat"></i> <a href="movement.html" class="boton-link">Movimientos de <br>Mercadería</a>
-</section>
-
-<section id="alertas-stock">
-  <i class="bi bi-box2"></i>  <a href="lowstock.html" class="boton-link">Stock</a>
-</section>
-
-<section id="diapositiva-venta">
-  <i class="bi bi-folder2-open"></i>  <a href="#" class="boton-link">Directorio</a>
-</section>
-</div>
-    </main>
-</body>
-
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <section id="registro-productos">
+            <i class="bi bi-journal-text"></i> <a href="products.html" class="boton-link">Registro de <br>Productos</a>
+          </section>
+          
+          <section id="registro-movimientos">
+            <i class="bi bi-arrow-repeat"></i> <a href="movement.html" class="boton-link">Movimientos de <br>Mercadería</a>
+          </section>
+          
+          <section id="alertas-stock">
+            <i class="bi bi-box2"></i>  <a href="lowstock.html" class="boton-link">Stock</a>
+          </section>
+          
+          <section id="diapositiva-venta">
+            <i class="bi bi-folder2-open"></i>  <a href="#" class="boton-link">Directorio</a>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
+
